@@ -2,11 +2,48 @@
  
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="cordova-plugin-autodimm-screen"
-      version="0.1.0">
+      version="1.0.0">
     <name>Auto Dimm Screen</name>
     <description>Auto Dimm Screen Cordova Plugin</description>
     <license>MIT</license>
     <author>Vahn</author>
     <keywords>phonegap,auto dimm screen</keywords>
+    
+    
+    <js-module src="www/autoDimmScreen.js" name="AutoDimmScreenPlugin">
+        <clobbers target="window.autodimm_screen" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AutoDimmScreenPlugin">
+                <param name="android-package" value="com.vahn.cordova.autodimmscreen.AutoDimmScreenPlugin"/>
+            </feature>
+        </config-file>
+        
+        
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+
+        
+        
+        <source-file src="src/android/AutoDimmScreenPlugin.java" target-dir="src/com/vahn/cordova/autodimmscreen/" />
+       
+        
+    </platform>
+    
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AutoDimmScreenPlugin">
+                <param name="ios-package" value="AutoDimmScreenPlugin"/>
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/AutoDimmScreenPlugin.h" />
+        <source-file src="src/ios/AutoDimmScreenPlugin.m" />
+    </platform>
  
 </plugin>
