@@ -1,7 +1,7 @@
 
 var autodimm_screen =
         {
-            autoDimmScreen: function (autoDimmScreenSuccess, autoDimmScreenError, action)
+            checkForAutoDimmScreen: function (autoDimmScreenSuccess, autoDimmScreenError, action)
             {
                 cordova.exec(
                         autoDimmScreenSuccess,
