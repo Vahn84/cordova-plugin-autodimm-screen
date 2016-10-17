@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="cordova-plugin-autodimm-screen"
+      version="0.1.0">
+    <name>Auto Dimm Screen</name>
+    <description>Auto Dimm Screen Cordova Plugin</description>
+    <license>MIT</license>
+    <author>Vahn</author>
+    <keywords>phonegap,auto dimm screen</keywords>
+ 
+</plugin>
